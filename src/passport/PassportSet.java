@@ -17,8 +17,9 @@ public class PassportSet {
 
     public Passport getPasportInfo(String passportNumber){
         System.out.println("Поиск по паспорту: " + passportNumber);
+
         for (Passport passport : passportDb) {
-            if (Objects.equals(passport.getPassportNumber().hashCode(), passportNumber.hashCode())) {
+            if (Objects.equals(passport.hashCode(), Objects.hash(passportNumber))) {
                 return passport;
             }
         }
