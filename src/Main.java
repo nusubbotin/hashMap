@@ -1,4 +1,5 @@
 import car.*;
+import multiplication.MultiplicationTable;
 import product.Product;
 import product.ProductSet;
 import recipe.Recipe;
@@ -14,7 +15,15 @@ public class Main {
         //task1();
         //task2();
         //task3();
-        task4();
+        //task4();
+        task5();
+    }
+
+    private static void task5() {
+        System.out.println("Часть 3. Задание 2:");
+        MultiplicationTable multiplicationTable = new MultiplicationTable();
+
+        System.out.println(multiplicationTable);
     }
 
     private static void task4() {
