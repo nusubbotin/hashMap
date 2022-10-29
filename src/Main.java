@@ -1,14 +1,16 @@
 import car.*;
 import multiplication.MultiplicationTable;
+import passport.Passport;
+import passport.PassportSet;
 import product.Product;
 import product.ProductSet;
 import recipe.Recipe;
 import recipe.RecipeSet;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,7 +18,30 @@ public class Main {
         //task2();
         //task3();
         //task4();
-        task5();
+        //task5();
+        task6();
+    }
+
+    private static void task6() {
+        System.out.println("Часть 3. Задание 3:");
+        PassportSet passportSet = new PassportSet();
+
+        DateFormat formatter = new SimpleDateFormat("DD.MM.YYYY");
+
+        try {
+            passportSet.addPasport(new Passport("1234 111111", "Иванов", "Иван", "Иванович", formatter.parse("01.01.1988")));
+            passportSet.addPasport(new Passport("1234 222222", "Петров", "Иван", "Иванович", formatter.parse("02.01.1988")));
+            passportSet.addPasport(new Passport("1234 333333", "Сидоров", "Иван", "Иванович", formatter.parse("03.01.1988")));
+            passportSet.addPasport(new Passport("1234 333333", "Сидоров", "Иван", "Иванович", formatter.parse("03.01.1999")));
+
+
+        } catch (ParseException e) {
+            throw new RuntimeException(e);
+        }
+
+        System.out.println(passportSet);
+
+        System.out.println(passportSet.getPasportInfo("1234 111111"));
     }
 
     private static void task5() {
