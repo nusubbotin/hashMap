@@ -20,6 +20,16 @@ public class Main {
         //task4();
         //task5();
         task6();
+
+        List<Integer> list = new ArrayList<>();
+        ArrayList<Integer> aList = new ArrayList<>();
+        LinkedList<Integer> lList = new LinkedList<>();
+        HashSet<Integer> hSet = new HashSet<>();
+
+        aList.containsAll(list);
+        lList.containsAll(list);
+        hSet.containsAll(list);
+
     }
 
     private static void task6() {
