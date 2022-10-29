@@ -1,14 +1,18 @@
 package product;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
 public class ProductSet {
     Set<Product> productSet = new HashSet<>();
 
-
-    public Set<Product> getProduct() {
-        return productSet;
+    public float getProductSummCost() {
+        float summCost = 0;
+        for (Product prod : productSet) {
+            summCost += prod.getCost();
+        }
+        return summCost;
     }
 
     public void addProduct(Product product) {
@@ -29,5 +33,10 @@ public class ProductSet {
 
         productSet.remove(product);
         System.out.println("Продукт "+ product.getName() + " удален из списка. Число продуктов: "+ productSet.size());
+    }
+
+    @Override
+    public String toString() {
+        return Arrays.toString(productSet.toArray());
     }
 }
