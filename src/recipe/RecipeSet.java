@@ -14,10 +14,8 @@ public class RecipeSet {
     }
 
     public void addRecipe(Recipe recipe) {
-        for (Recipe r : recipes) {
-            if (r.equals(recipe)) {
-                throw new RuntimeException("Такой рецепт уже существует");
-            }
+        if (recipes.contains(recipe)){
+            throw new RuntimeException("Такой рецепт уже существует");
         }
         recipes.add(recipe);
         System.out.println("Рецепт " +recipe.getName()+" добавлен. Общее количество рецептов в наборе: "+recipes.size());

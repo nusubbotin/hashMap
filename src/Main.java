@@ -15,11 +15,11 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         //task1();
-        //task2();
+        task2();
         //task3();
         //task4();
         //task5();
-        task6();
+        //task6();
 
         List<Integer> list = new ArrayList<>();
         ArrayList<Integer> aList = new ArrayList<>();
@@ -192,6 +192,7 @@ public class Main {
         ProductSet productSet1 = new ProductSet();
         productSet1.addProduct(new Product("апельсины", 120.50f, 1.5f));
         productSet1.addProduct(new Product("мандарины", 100, 1.5f));
+        productSet1.addProduct(new Product("мандарины", 100, 1.5f));
 
         recipeSet.addRecipe(new Recipe("Тропический салат", productSet1));
 
@@ -201,7 +202,7 @@ public class Main {
         recipeSet.addRecipe(new Recipe("Овощной салат", productSet2));
         System.out.println(recipeSet);
 
-        //recipeSet.addRecipe(new Recipe("Тропический салат", productSet2)); //Такой рецепт уже существует
+        recipeSet.addRecipe(new Recipe("Тропический салат", productSet2)); //Такой рецепт уже существует
 
     }
 

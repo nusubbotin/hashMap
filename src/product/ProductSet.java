@@ -16,10 +16,8 @@ public class ProductSet {
     }
 
     public void addProduct(Product product) {
-        for (Product prod : productSet) {
-            if (prod.equals(product)) {
-                throw new RuntimeException("Товар уже находится в списке (наборе)");
-            }
+        if (productSet.contains(product)) {
+            throw new RuntimeException("Товар уже находится в списке (наборе)");
         }
         productSet.add(product);
     }
