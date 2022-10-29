@@ -8,7 +8,18 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         //task1();
-        task2();
+        //task2();
+        task3();
+    }
+
+    private static void task3() {
+        System.out.println("Часть2. Задание 2:");
+        IntSet intSet = new IntSet();
+
+        System.out.println(intSet);
+        intSet.delNotEven();
+        System.out.println(intSet);
+
     }
 
     private static void task2() {
